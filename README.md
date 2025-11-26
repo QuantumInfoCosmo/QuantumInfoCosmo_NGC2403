@@ -1,3 +1,6 @@
+[README.md](https://github.com/user-attachments/files/23772856/README.md)
+📄 **Preprint (OSF PDF):** [https://osf.io/pa3fy/](https://osf.io/pa3fy/)
+
 # QIC-S Theory: The Hamiltonian Landscape
 
 ### Reconstructing Galaxy Dynamics from Information Transport (No Dark Matter)
