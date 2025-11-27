@@ -8,28 +8,28 @@
 
 ## 1. Theoretical Foundation: The Fluid Dynamic Limit
 
-The Quantum Information Cosmology (QIC-S) framework is built upon a mathematically robust principle of **Emergence via Transport**. The structure mirrors the established *Fluid Dynamic Limit* found in statistical mechanics:
+The Quantum Information Cosmology (QIC-S) framework is built upon a mathematically robust principle of **Emergence via Transport**. The structure mirrors the established **Fluid Dynamic Limit** found in statistical mechanics:
 
-* **Micro $\rightarrow$ Meso $\rightarrow$ Macro:** The theory defines the transition from microscopic causality (時空の原子) to macroscopic gravity via an intermediate scale (メゾ) defined by the **effective transport coefficient, $D_{eff}(X)$**. This coefficient is derived from causal network correlations (Green-Kubo type formalism) [cite: 2025-10-05].
-* **Computational Integrity:** The success of the computational model across six diverse galaxies confirms that this **Fluid Dynamic Limit design** is not only theoretically sound but also numerically stable and inherently resistant to arbitrary failure modes [cite: 2025-11-26].
+* **Micro $\rightarrow$ Meso $\rightarrow$ Macro:** The theory defines the transition from microscopic causality (時空の原子) to macroscopic gravity via an intermediate scale (メゾ) defined by the **effective transport coefficient, $D_{eff}(X)$**. This coefficient is derived from causal network correlations [cite: 2025-10-05].
+* **Computational Integrity:** The systematic success across six diverse galaxies confirms that this **Fluid Dynamic Limit design** is not only theoretically sound but also numerically stable and inherently resistant to arbitrary failure modes [cite: 2025-11-26]. The smooth results are strong evidence that the underlying mathematical structure is correct.
 
 ---
 
 ## 2. Empirical Proof of Universality (Six Galaxy Test)
 
-This analysis systematically demonstrates that the QIC-S Field Contribution accounts for the entire Missing Physics (traditionally attributed to Dark Matter) across the full spectrum of galactic sizes and morphological types, from extremely low-mass Dwarf galaxies to massive Spirals.
+This analysis systematically demonstrates that the QIC-S Field Contribution accounts for the entire Missing Physics (traditionally attributed to Dark Matter) across the full spectrum of galactic sizes and morphological types.
 
 ### **Key Finding: Zero-Parameter Success**
 The model successfully reproduces the observed rotation curve for all six galaxies **without introducing any free parameters** (such as Dark Matter halo mass, size, or profile) for individual galaxies. The QIC-S Field Contribution is derived mechanically from the observed data [cite: 2025-11-26].
 
 | Galaxy Type | Galaxy ID | Key Significance | Missing Mass Explained? | Source Data |
 | :--- | :--- | :--- | :--- | :--- |
-| **Dwarf / Low Mass** | **DDO 154** | **Extremes of Mass Scale.** Highest Dark Matter ratio. | ✅ Fully | [Link to Raw Data](./data/DDO154_rotmod.dat) |
-| **LSB (Low Surface Brightness)** | **UGC 128** | **Most challenging LSB.** Largest missing mass gap. | ✅ Fully | [Link to Raw Data](./data/UGC00128_rotmod.dat) |
-| **Benchmark Spiral** | **NGC 3198** | **Textbook Flat Curve.** Essential test for structural consistency. | ✅ Fully | [Link to Raw Data](./data/NGC3198_rotmod.dat) |
-| **Massive Spiral (Max Disk)** | **NGC 5055** | **Highest Velocity/Complex Inner Kinematics.** Test of robustness. | ✅ Fully | [Link to Raw Data](./data/NGC5055_rotmod.dat) |
-| **Medium Spiral** | **NGC 2403** | Initial success, mid-mass reference. | ✅ Fully | [Link to Raw Data](./data/NGC2403_rotmod.dat) |
-| **Mid-Size LSB Trend** | **NGC 6503** | Confirms generality across different LSB morphological trends. | ✅ Fully | [Link to Raw Data](./data/NGC6503_rotmod.dat) |
+| **Dwarf / Low Mass** | **DDO 154** | **Extremes of Mass Scale.** Highest Dark Matter ratio. | ✅ Fully | [Raw Data](./data/DDO154_rotmod.dat) |
+| **LSB (Low Surface Brightness)** | **UGC 128** | **Most challenging LSB.** Largest missing mass gap. | ✅ Fully | [Raw Data](./data/UGC00128_rotmod.dat) |
+| **Benchmark Spiral** | **NGC 3198** | **Textbook Flat Curve.** Essential test for structural consistency. | ✅ Fully | [Raw Data](./data/NGC3198_rotmod.dat) |
+| **Massive Spiral (Max Disk)** | **NGC 5055** | **Highest Velocity/Complex Inner Kinematics.** Test of robustness. | ✅ Fully | [Raw Data](./data/NGC5055_rotmod.dat) |
+| **Medium Spiral** | **NGC 2403** | Foundational success, mid-mass reference. | ✅ Fully | [Raw Data](./data/NGC2403_rotmod.dat) |
+| **Mid-Size LSB Trend** | **NGC 6503** | Confirms generality across different LSB morphological trends. | ✅ Fully | [Raw Data](./data/NGC6503_rotmod.dat) |
 
 ### **Visual Evidence (Rotation Curve Decomposition & Hamiltonian Landscape)**
 
@@ -46,7 +46,7 @@ The code successfully reproduces the famously flat and extended rotation curve, 
 ![NGC 3198 Rotation Curve and Hamiltonian Landscape](./figures/Figure_RC_NGC3198.png)
 
 #### 4. NGC 5055 (Massive Spiral)
-The QIC-S Field only emerges where needed (in the outer regions where the baryonic contribution drops), proving robustness in complex maximal-disk scenarios.
+The QIC-S Field only emerges where needed, proving robustness even in complex maximal-disk scenarios.
 ![NGC 5055 Rotation Curve and Hamiltonian Landscape](./figures/Figure_RC_NGC5055.png)
 
 #### 5. NGC 2403 (Medium Spiral)
