@@ -34,7 +34,7 @@
 ### 3. Figure
 **Figure 1: NGC 2403 Rotation Curve (QIC-S Ver.3.9.11)** （理論予測値（青線）と観測データ（エラーバー付き点）の比較）
 
-![NGC 2403 Analysis Result](NGC2403_QICS_complete-1.png)
+![NGC 2403 Analysis Result](NGC2403_QICS_v3911.png)
 
 ---
 
