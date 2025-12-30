@@ -1,4 +1,9 @@
 # Quantum Information Cosmology (QIC-S) - NGC 2403 Analysis
+## 🚀 How to Reproduce Results (Ver.3.9.11)
+To generate the definitive 4-panel plots (Rotation Curve, Residuals, Model Comparison, RAR) and verify the zero-parameter analysis, please run the following script:
+
+```bash
+python QIC_S_NGC2403_Analysis_v3911.py
 
 [![OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FZ9NWY-blue.svg)](https://osf.io/z9nwy/)
 ![Version](https://img.shields.io/badge/Version-3.9.11-green.svg)
