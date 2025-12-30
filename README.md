@@ -31,6 +31,9 @@
     * **$\chi^2_{red}$:** 12.7
     * 従来のダークマターモデルやMONDと比較しても、恣意的な調整なしで極めて自然にデータを説明しています。
 
+> **Note on Statistical Interpretation:**
+> While the RMS fit is excellent (4.8 km/s), the reduced $\chi^2$ value ($\chi^2_{red} = 12.7$) suggests the presence of systematic uncertainties (e.g., inclination angle, distance, non-circular motions) that are not fully accounted for in the current standard error budget. A comprehensive covariance analysis incorporating these systematic floors is planned for future updates.
+
 ### 3. Figure
 **Figure 1: NGC 2403 Rotation Curve (QIC-S Ver.3.9.11)** （理論予測値（青線）と観測データ（エラーバー付き点）の比較）
 
