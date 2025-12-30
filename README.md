@@ -24,7 +24,7 @@ By bridging microscopic quantum information (Cauchy Slice Holography) and macros
 ## Analysis Results: NGC 2403
 The following plot demonstrates the QIC-S model fit for NGC 2403, showing the rotation curve, residuals, and the Radial Acceleration Relation (RAR).
 
-![NGC 2403 Analysis Results](NGC2403_QICS_complete-1.jpg)
+![NGC 2403 Analysis Results](NGC2403_QICS_complete-1.png)
 
 *(Note: Ensure the image file `NGC2403_QICS_complete-1.jpg` is uploaded to this repository for the image to appear.)*
 
