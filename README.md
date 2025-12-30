@@ -7,35 +7,34 @@
 **Author:** Yoshiaki Sasada (Independent Researcher)
 
 ## Overview
-本リポジトリは、量子情報宇宙論（Quantum Information Cosmology: QIC-S）に基づき、銀河回転曲線の平坦化問題を解決するための理論構築および実データによる検証結果を公開するものです。
+This repository presents the theoretical framework and observational validation results for solving the galactic rotation curve problem based on **Quantum Information Cosmology (QIC-S)**.
 
-**Ver.3.9.11** において、理論と観測の整合性が完全に確立されました。
-銀河 **NGC 2403** の観測データを用いた解析により、QIC-S理論は**自由パラメータを一切使用せず（Zero Parameters）**、物理法則の第一原理のみから観測事実を極めて高い精度で再現することに成功しました。
+In **Ver.3.9.11**, the consistency between theory and observation has been fully established. Analysis using **NGC 2403** data demonstrates that QIC-S theory reproduces observational facts with high precision using only first principles of physical laws, **without utilizing any free parameters (Zero Parameters)**.
 
 ---
 
 ## Key Achievements (Ver.3.9.11)
 
-### 1. 理論の完成 (Theoretical Framework)
-本バージョンにより、QIC-S理論の核心部分が完成しました。銀河回転曲線の平坦化は、ダークマターのような未知の物質ではなく、以下の2つの物理的メカニズムによって説明されます。
+### 1. Theoretical Framework
+This version marks the completion of the core QIC-S theory. The flattening of galactic rotation curves is explained not by unknown substances like Dark Matter, but by the following two physical mechanisms:
 
-* **3次元Cauchyスライス上のCNMG理論:** 時空の微視的構造に基づく幾何学的アプローチ。
-* **重力ポテンシャルの対数補正:** 長距離相互作用における量子情報的な補正項。
+* **Critical New Massive Gravity (CNMG) on 3D Cauchy Slices:** A geometric approach based on the microscopic structure of spacetime.
+* **Logarithmic Potential Correction:** A quantum informational correction term in long-range interactions.
 
-### 2. 観測による検証 (Observational Validation)
-銀河 NGC 2403 の回転曲線データを用いた検証結果は以下の通りです。
+### 2. Observational Validation
+The validation results using the rotation curve data of NGC 2403 are as follows:
 
-* **自由パラメータなし:** 理論に含まれる加速度パラメータ $a_0$ は、観測値合わせのパラメータではなく、宇宙論的定数から導かれる定数 $a_0 = \frac{cH_0}{2\pi}$ として一意に定まります。
-* **高精度な再現性:**
+* **Zero Parameters:** The acceleration scale $a_0$ in the theory is not a fitting parameter but is uniquely determined from cosmological constants as $a_0 = \frac{cH_0}{2\pi}$.
+* **High Precision:**
     * **RMS:** 4.8 km/s
     * **$\chi^2_{red}$:** 12.7
-    * 従来のダークマターモデルやMONDと比較しても、恣意的な調整なしで極めて自然にデータを説明しています。
+    * The theory naturally explains the data without arbitrary adjustments, performing comparably to or better than traditional Dark Matter models or MOND.
 
 > **Note on Statistical Interpretation:**
 > While the RMS fit is excellent (4.8 km/s), the reduced $\chi^2$ value ($\chi^2_{red} = 12.7$) suggests the presence of systematic uncertainties (e.g., inclination angle, distance, non-circular motions) that are not fully accounted for in the current standard error budget. A comprehensive covariance analysis incorporating these systematic floors is planned for future updates.
 
 ### 3. Figure
-**Figure 1: NGC 2403 Rotation Curve (QIC-S Ver.3.9.11)** （理論予測値（青線）と観測データ（エラーバー付き点）の比較）
+**Figure 1: NGC 2403 Rotation Curve (QIC-S Ver.3.9.11)** (Comparison between Theoretical Prediction (cyan line) and Observational Data (points with error bars))
 
 ![NGC 2403 Analysis Result](NGC2403_QICS_v3911.png)
 
@@ -43,11 +42,11 @@
 
 ## Repository Contents
 
-主要な成果物は以下の通りです。論文および補足データはOSFにて永続的に保存・公開されています。
+The main outputs are listed below. The paper and supplementary data are permanently stored and published on OSF.
 
-* **`QIC-S_Paper_v3911.pdf`** 理論の詳細な導出、数学的バックボーン、および解析結果をまとめた論文（決定版）。
+* **`QIC-S_Paper_v3911.pdf`** The definitive paper summarizing the detailed theoretical derivation, mathematical backbone, and analysis results.
     
-* **`NGC2403_QICS_v3911.png`** 本理論による回転曲線のフィッティング結果グラフ。
+* **`NGC2403_QICS_v3911.png`** The graph of the rotation curve fitting result based on this theory.
 
 ### External Resources
 * **OSF Project Page:** [https://osf.io/z9nwy/](https://osf.io/z9nwy/)
@@ -56,17 +55,17 @@
 ---
 
 ## Future Roadmap (Post-Ver.4.0)
-Ver.3.9.11をもって本理論の基礎は完成しましたが、より厳密な数学的定式化および適用範囲の拡大に向けて、以下の課題に取り組む予定です。
+With the foundation established in Ver.3.9.11, future work will focus on rigorous mathematical formalization and expanding the scope of application:
 
-1.  **Assumption の Theorem 化:** 仮定として置いている命題の数学的定理への昇華。
-2.  **Ξμν の一意性/最小性の証明:** 理論の根幹をなすテンソルの数学的性質の証明。
-3.  **太陽系制約・戸谷方向の定量化:** 太陽系スケールや他の重力テストにおける整合性の確認。
-4.  **ΛCDM / MOND との BIC 比較:** ベイズ情報量規準を用いたモデル比較による優位性の統計的実証。
+1.  **Theoremization of Assumptions:** Elevating current physical assumptions to mathematical theorems.
+2.  **Uniqueness of $\Xi_{\mu\nu}$:** Proving the uniqueness and minimality of the emergent tensor (theory's core).
+3.  **Solar System Constraints:** Quantifying effects at smaller scales (e.g., Totani's direction).
+4.  **Model Comparison:** Statistical demonstration of superiority using BIC (Bayesian Information Criterion) against $\Lambda$CDM and MOND.
 
 ---
 
 ## Contact
-ご質問や議論については、Issues またはメールにてご連絡ください。
+For questions or discussions, please contact via **GitHub Issues**.
 
 **Yoshiaki Sasada** Independent Researcher, Quantum Information Cosmology
 
