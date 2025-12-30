@@ -54,6 +54,7 @@ The validation results using the rotation curve data of NGC 2403 are as follows:
 ### 3. Figure
 
 **Figure 1: NGC 2403 Rotation Curve (QIC-S Ver.3.9.11)**  
+![NGC 2403 Analysis Result](NGC2403_QICS_v3911.png)
 *(Comparison between Theoretical Prediction (cyan line) and Observational Data (points with error bars))*
 
 ---
