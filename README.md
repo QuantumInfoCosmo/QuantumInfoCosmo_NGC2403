@@ -47,7 +47,7 @@
 
 * **`QIC-S_Paper_v3911.pdf`** 理論の詳細な導出、数学的バックボーン、および解析結果をまとめた論文（決定版）。
     
-* **`NGC2403_QICS_v3911.jpg`** 本理論による回転曲線のフィッティング結果グラフ。
+* **`NGC2403_QICS_v3911.png`** 本理論による回転曲線のフィッティング結果グラフ。
 
 ### External Resources
 * **OSF Project Page:** [https://osf.io/z9nwy/](https://osf.io/z9nwy/)
@@ -65,16 +65,20 @@ Ver.3.9.11をもって本理論の基礎は完成しましたが、より厳密�
 
 ---
 
+## Contact
+ご質問や議論については、Issues またはメールにてご連絡ください。
+
 **Yoshiaki Sasada** Independent Researcher, Quantum Information Cosmology
+
 ## Citation
 If you use this theory or code in your research, please cite the project via the OSF DOI:
 
 ```bibtex
 @misc{Sasada2025QICS,
-  title = {Emergent Galactic Dynamics from Critical Cauchy Slice Holography (QIC-S Ver.3.9.10)},
+  title = {Emergent Galactic Dynamics from Critical Cauchy Slice Holography (QIC-S Ver.3.9.11)},
   author = {Sasada, Yoshiaki},
   year = {2025},
   publisher = {OSF},
   doi = {10.17605/OSF.IO/Z9NWY},
-  url = {https://doi.org/10.17605/OSF.IO/Z9NWY}
+  url = {[https://doi.org/10.17605/OSF.IO/Z9NWY](https://doi.org/10.17605/OSF.IO/Z9NWY)}
 }
