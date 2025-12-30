@@ -79,4 +79,5 @@ If you use this theory or code in your research, please cite the project via the
   year = {2025},
   publisher = {OSF},
   doi = {10.17605/OSF.IO/Z9NWY},
-  url = {
+  url = {[https://doi.org/10.17605/OSF.IO/Z9NWY](https://doi.org/10.17605/OSF.IO/Z9NWY)}
+}
