@@ -1,6 +1,11 @@
 # QIC-S Theory: Observational Evidence for Multi-Hamiltonian Universe
 **Zero-Parameter Analysis of Galaxy Rotation Curves & Detection of Locally Emerging Physical Laws**
 
+### 🔗 Official Paper / Manifesto
+**[Read the Full Manifesto on OSF (Open Science Framework)](https://osf.io/z9nwy/overview)**
+
+---
+
 ## Overview
 This repository contains the definitive analysis code and results for **QIC-S Theory (Quantum Information Cosmology - Sasada)**. 
 
@@ -25,6 +30,8 @@ Our Zero-Parameter analysis ($a_0$ fixed to theoretical value $1.23 \times 10^{-
 
 3.  **Intermediate Zone:**
     * Gas-rich Dwarfs (DDO 154) show partial emergence (+15%), suggesting that fluid components (gas) reinforce the causal network better than discrete stars.
+
+![QIC-S Final Report](QICS_Final_Report.png)
 
 ## Methodology
 * **Theory:** QIC-S Ver. 2.3 (Information Hydrodynamics limit).
