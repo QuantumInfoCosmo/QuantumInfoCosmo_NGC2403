@@ -9,7 +9,7 @@
 ## Overview
 This repository contains the definitive analysis code and results for **QIC-S Theory (Quantum Information Cosmology - Sasada)**. 
 
-By analyzing the rotation curves of **8 diverse galaxies** (ranging from massive spirals to dwarf irregulars) under a strict **Zero-Parameter constraint**, this project provides observational evidence for the **Multi-Hamiltonian Universe** (Ver. 2.3).
+By analyzing the rotation curves of **8 diverse galaxies** (ranging from massive spirals to dwarf irregulars) under a strict **Zero-Parameter constraint**, this project provides observational evidence for the **Multi-Hamiltonian Universe** (Ver. 3.9.11).
 
 The results demonstrate that the laws of physics (specifically the effective transport coefficient $D_{eff}$, corresponding to the acceleration scale $a_0$) are not universal constants but **emerge locally** depending on the environmental density and scale.
 
@@ -34,7 +34,7 @@ Our Zero-Parameter analysis ($a_0$ fixed to theoretical value $1.23 \times 10^{-
 ![QIC-S Final Report](QICS_Final_Report.png)
 
 ## Methodology
-* **Theory:** QIC-S Ver. 2.3 (Information Hydrodynamics limit).
+* **Theory:** QIC-S Ver. 3.9.11 (Information Hydrodynamics limit).
 * **Constraint:** **Zero Free Parameters.**
     * Critical Acceleration: $a_0 = c H_0 / 2\pi \approx 1.23 \times 10^{-10} \text{ m/s}^2$ (Fixed).
     * Mass-to-Light Ratio: $M/L_{disk} = 0.5$, $M/L_{gas} = 1.0$ (Fixed for all galaxies).
