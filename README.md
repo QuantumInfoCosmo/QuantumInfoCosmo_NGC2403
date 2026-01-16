@@ -1,6 +1,6 @@
 # Quantum Information Cosmology with Scalar Field (QIC-S)
 
-[![OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FZ9NWY-blue.svg)](https://osf.io/z9nwy/)
+[![OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FZ9NWY-blue.svg)](https://osf.io/yadkr/overview)
 ![Version](https://img.shields.io/badge/Version-5.0-green.svg)
 
 **Version:** 5.0  
@@ -79,8 +79,8 @@ The framework is inspired by holographic principles and entropic gravity, but pr
 
 ## External Resources
 
-- **OSF Project**: https://osf.io/z9nwy/
-- **DOI**: 10.17605/OSF.IO/Z9NWY
+- **OSF Project**: https://osf.io/yadkr/overview
+- **DOI**: 10.17605/OSF.10.17605/OSF.IO/YADKR
 - **SPARC Database**: http://astroweb.cwru.edu/SPARC/
 
 ---
