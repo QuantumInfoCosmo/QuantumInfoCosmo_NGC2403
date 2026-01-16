@@ -95,8 +95,8 @@ The framework is inspired by holographic principles and entropic gravity, but pr
   author  = {Sasada, Yoshiaki},
   year    = {2026},
   publisher = {OSF},
-  doi     = {10.17605/OSF.IO/Z9NWY},
-  url     = {https://doi.org/10.17605/OSF.IO/Z9NWY}
+  doi     = {10.17605/OSF.IO/YADKR},
+  url     = {https://doi.org/10.17605/OSF.IO/Yadkr}
 }
 ```
 
