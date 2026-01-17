@@ -40,7 +40,7 @@ Use these scripts to reproduce the results and figures presented in the Ver 5.0 
 
 | Script | Purpose | Output |
 |--------|---------|--------|
-| `QIC_S_NGC2403_Landscape.py` | Visualizes the "Hamiltonian Landscape" for NGC 2403 | 3D effective potential and rotation curve fit |
+| `QIC_S_NGC2403_Landscape.py` | Visualizes the "Hamiltonian Landscape" for NGC 2403 | 3D effective potential and rotation curve fit. Contains Japanese comments. |
 | `QIC_S_MultiGalaxy_Analysis.py` | Statistical verification across **8 galaxies** | $\chi^2_{\nu}$ and BIC values for validation |
 
 ### 2. Legacy / Reference Codes
