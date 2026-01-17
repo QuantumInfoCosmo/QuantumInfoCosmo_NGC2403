@@ -2,7 +2,7 @@
 
 **Ver 5.0.1 - January 17, 2026**
 
-[![OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FYADKR-blue.svg)](https://osf.io/yadkr/)
+[![OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FYADKR-blue.svg)](https://osf.io/yadkr/overview)
 [![Version](https://img.shields.io/badge/Version-5.0.1-green.svg)](https://github.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
@@ -71,8 +71,6 @@ The `data/` directory contains cleaned rotation curve data for **8 galaxies** sp
 | DDO 154 | Dwarf Irregular | Gas-rich dwarf galaxy |
 | UGC 128 | LSB | Low Surface Brightness galaxy |
 
-> **Note (Ver 5.0.1):** NGC 2903 data has been added, completing the full 8-galaxy dataset for comprehensive statistical validation.
-
 ### Figures
 
 The `figures/` directory contains high-resolution figures used in the paper.
@@ -93,26 +91,20 @@ python QIC_S_NGC2403_Landscape.py
 python QIC_S_MultiGalaxy_Analysis.py
 ```
 
+### 💡 Tips for Execution
+
+When running `QIC_S_MultiGalaxy_Analysis.py`, if not all 8 galaxy data files are present in the `data/` directory, you will see a message like `Warning: [filename] not found` in the console.
+
+* **This is not an error or crash** — the program is designed to skip missing data and continue the analysis with available files.
+* As long as at least one data file (e.g., `NGC2403_rotmod.dat`) exists, the statistical analysis and chart generation will proceed normally.
+* This design allows flexible validation using only the galaxies you have data for.
+
 ### Requirements
 
 - Python 3.8+
 - NumPy
 - Matplotlib
 - SciPy
-
----
-
-## 📜 Changelog
-
-### Ver 5.0.1 (January 17, 2026)
-- **Added:** NGC 2903 rotation curve data (`NGC2903_rotmod.dat`)
-- **Updated:** Multi-galaxy analysis now covers 8 galaxies (previously 7)
-- **Fixed:** Complete dataset for full statistical validation
-
-### Ver 5.0 (January 16, 2026)
-- Initial release of QIC-S Ver 5.0 (Definitive Edition)
-- Zero-parameter framework established
-- 98.46% agreement demonstrated for NGC 2403
 
 ---
 
