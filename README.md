@@ -64,9 +64,16 @@ QIC-S posits that the "missing mass" is a manifestation of field energy associat
 
 ## 📂 Repository Contents
 
+### Paper
 * **`Sasada_QIC-S_Paper_Ver5.1.pdf`** : The full scientific paper (Main Text).
-* **`QIC_S_NGC2403_Analysis_v3911.py`** : Python code for reproduction.
-* **`data/`** : Rotation curve data from SPARC.
+
+### Analysis Code
+* **`QICS_ZeroParam_Analysis.py`** : True zero-parameter analysis (Definitive Edition, Ver 4.0).
+* **`QIC_S_MultiGalaxy_Analysis.py`** : Multi-galaxy analysis code (8 galaxies).
+* **`QIC_S_NGC2403_Landscape.py`** : Hamiltonian landscape visualization for NGC 2403.
+
+### Data
+* **`data/`** : Rotation curve data from SPARC database.
 * **`figures/`** : Analysis plots and figures.
 
 ---
