@@ -1,96 +1,179 @@
 # Quantum Information Cosmology with Scalar Field (QIC-S)
-**Parameter-Free Derivation of Galaxy Rotation Curves**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repo-black.svg?logo=github)](https://github.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403)
-[![OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FYADKR-blue.svg)](https://osf.io/yadkr/)
-![Version](https://img.shields.io/badge/Version-5.1-green.svg)
+## Version 7.0: Mathematical Foundation for Multi-Hamiltonian Universe
 
-* **Version:** 5.1
-* **Author:** Yoshiaki Sasada (Independent Researcher)
-* **Status:** Complete / Open for Review
+[![DOI](https://img.shields.io/badge/DOI-10.17605%2FOSF.IO%2F9ZS47-blue)](https://doi.org/10.17605/OSF.IO/9ZS47)
+[![OSF](https://img.shields.io/badge/OSF-Repository-green)](https://osf.io/9zs47/)
+[![arXiv](https://img.shields.io/badge/Based%20on-arXiv%3A2512.11045-red)](https://arxiv.org/abs/2512.11045)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
----
-
-## 🌌 Overview
-
-**Does the universe really need Dark Matter?**
-
-This project presents **Quantum Information Cosmology with Scalar Field (QIC-S)**, a novel theoretical framework that resolves the galactic "missing mass" problem without postulating non-baryonic dark matter.
-
-By treating gravity as an emergent phenomenon driven by the conservation of **Information Field Energy**, QIC-S naturally reproduces the flat rotation curves of galaxies.
-
-### 🚀 Key Achievements
-
-1.  **Parameter-Free**: Unlike $\Lambda$CDM (NFW profiles) or MOND ($a_0$), QIC-S requires **no tuning parameters**. The halo mass is mathematically derived solely from the visible baryonic distribution.
-
-2.  **Universal Validity**: Tested against 7 diverse galaxies from the **SPARC database**, covering 2 orders of magnitude in mass ($10^{9.4} - 10^{11.3} M_\odot$).
-
-3.  **High Precision**: Mean statistical agreement of **99.46%** between theoretical predictions and dynamically required masses.
+**Author:** Yoshiaki Sasada | **Date:** January 2026
 
 ---
 
-## 📊 Results Summary
+## 🌌 What is QIC-S?
 
-| Galaxy | Type | M_Newton ($M_\odot$) | M_QIC ($M_\odot$) | Agreement |
-| :--- | :--- | :--- | :--- | :--- |
-| **DDO 154** | Dwarf | $2.46 \times 10^9$ | $2.46 \times 10^9$ | **100.21%** |
-| **NGC 2403** | Spiral | $6.92 \times 10^{10}$ | $6.81 \times 10^{10}$ | **98.46%** |
-| **NGC 3198** | Spiral | $1.65 \times 10^{11}$ | $1.66 \times 10^{11}$ | **100.49%** |
-| **UGC 128** | LSB | $1.67 \times 10^{11}$ | $1.75 \times 10^{11}$ | **104.28%** |
-| **NGC 5055** | Spiral | $2.02 \times 10^{11}$ | $1.98 \times 10^{11}$ | **98.25%** |
-| **NGC 6503** | Spiral | $5.57 \times 10^{10}$ | $5.47 \times 10^{10}$ | **98.11%** |
-| **IC 2574** | Irregular | $7.72 \times 10^9$ | $7.44 \times 10^9$ | **96.43%** |
+**QIC-S (Quantum Information Cosmology with Scalar Field)** is a theoretical framework that explains galactic rotation curves **without invoking Dark Matter particles**.
 
-> **Global Mean Agreement: 99.46% ± 2.53%**
+### The Key Insight: Dark Matter = "Glue" Energy
+
+Ver.7.0 establishes that:
+
+> **Dark Matter is not a cloud of particles, but the energy cost of the "glue" (のり, *nori*) connecting regions of different effective physics.**
+
+This "glue" is mathematically identified as the **Conformal Interface** from quantum field theory.
 
 ---
 
-## 🧠 Theoretical Framework
+## 📄 Full Paper
 
-QIC-S posits that the "missing mass" is a manifestation of field energy associated with a scalar information field, $D(x,t)$, which emerges from the information entropy of spacetime.
+📥 **[Download Ver.7.0 Paper (PDF) from OSF](https://osf.io/9zs47/)**
 
-### Core Equations
-
-* **Field-Density Correspondence:**
-    $\rho_{\rm eff} = (\nabla D)^2$
-
-* **Energy Conservation:**
-    $M_{\rm eff}(r) = \int 4\pi r^2 (\nabla D)^2 dr$
-
-* **Local Response:**
-    The field $D$ is induced locally by the baryonic matter distribution.
+**DOI:** [10.17605/OSF.IO/9ZS47](https://doi.org/10.17605/OSF.IO/9ZS47)
 
 ---
 
-## 📂 Repository Contents
+## 🔬 Key Results
 
-### Paper
-* **`Sasada_QIC-S_Paper_Ver5.1.pdf`** : The full scientific paper (Main Text).
-
-### Analysis Code
-* **`QICS_ZeroParam_Analysis.py`** : True zero-parameter analysis (Definitive Edition, Ver 4.0).
-* **`QIC_S_MultiGalaxy_Analysis.py`** : Multi-galaxy analysis code (8 galaxies).
-* **`QIC_S_NGC2403_Landscape.py`** : Hamiltonian landscape visualization for NGC 2403.
-
-### Data
-* **`data/`** : Rotation curve data from SPARC database.
-* **`figures/`** : Analysis plots and figures.
+| Result | Description |
+|--------|-------------|
+| **Gluing Mechanism** | Galaxies are local domains on the Conformal Manifold, connected by conformal interfaces |
+| **Positive Energy (ANEC)** | Interface energy N_D > 0 guaranteed — Dark Matter is always attractive, never repulsive |
+| **Quantum Stability** | Protected by ⟨φφφ⟩ = 0 (vanishing three-point function) |
+| **Zero Free Parameters** | Satisfies Swampland Conjecture 0 — no arbitrary fitting |
 
 ---
 
-## 🔗 Citation
+## 📐 Core Equations
 
-If you use this theory or code in your research, please cite as:
+### The Gluing Condition
+```
+T_L − T̄_L = T_R − T̄_R
+```
+Energy-momentum conservation across the interface between Galaxy (L) and Intergalactic Space (R).
+
+### The Displacement Operator
+```
+D ≡ 2(T_L − T_R)
+
+⟨D(z)D(w)⟩ = N_D / (z−w)⁴
+
+where N_D = (2πδλ)² > 0
+```
+The energy cost of the Gluing Mechanism. Positivity guaranteed by ANEC.
+
+### Interface Width Scaling
+```
+ℓ_interface ~ 1/|D_eff,gal − D_eff,cosmic|
+```
+Unique prediction: isolated galaxies have sharper interfaces than cluster galaxies.
+
+---
+
+## 🎯 Testable Predictions
+
+1. **Interface Width Scaling** — Halo sharpness correlates with environmental contrast
+2. **No Negative Mass** — Repulsive Dark Matter is mathematically impossible (N_D > 0)
+3. **Environmental Signature** — Distinct from CDM tidal stripping effects
+4. **Universal Invariant** — Some quantity analogous to (c − c̄) should be universal
+
+---
+
+## 🧠 Theoretical Foundation
+
+Ver.7.0 is built upon:
+
+| Reference | Contribution |
+|-----------|--------------|
+| [Komatsu, Kusuki, Meineri & Ooguri (2025)](https://arxiv.org/abs/2512.11045) | Conformal Interface theory, Exactly Marginal Operators |
+| [Ooguri & Vafa (2007)](https://arxiv.org/abs/hep-th/0605264) | Swampland Program, Conjecture 0 |
+| [Meineri et al. (2020)](https://arxiv.org/abs/1904.10974) | ANEC bounds on interface energy |
+| [Harlow & Ooguri (2021)](https://arxiv.org/abs/1810.05338) | Symmetries in quantum gravity |
+
+---
+
+## 📊 The Paradigm Shift
+
+| Traditional View | QIC-S Ver.7.0 View |
+|------------------|-------------------|
+| Dark Matter = unknown particles | Dark Matter = **interface energy** |
+| Halo = particle cloud | Halo = **vacuum transition zone** |
+| NFW parameters = fitted | Parameters = **geometrically determined** |
+| Free parameters per galaxy | **Zero free halo parameters** |
+
+---
+
+## 📁 Repository Structure
+
+```
+QIC-S/
+├── README.md                    # This file (Ver.7.0)
+├── QIC-S_Ver7.0.pdf            # Full paper
+├── QIC-S_Ver7.0.md             # Markdown version
+├── archive/
+│   └── QIC-S_Ver5.1_Archive.md # Previous version (Optimization Principle)
+└── code/
+    └── (analysis scripts)
+```
+
+---
+
+## 🔗 Links
+
+- **OSF Repository:** https://osf.io/9zs47/
+- **DOI:** https://doi.org/10.17605/OSF.IO/9ZS47
+- **Based on:** [arXiv:2512.11045](https://arxiv.org/abs/2512.11045) (Ooguri et al.)
+
+---
+
+## 📜 Citation
+
+If you use QIC-S in your research, please cite:
 
 ```bibtex
-@misc{Sasada2026QICS,
-  title   = {Quantum Information Cosmology with Scalar Field (QIC-S): 
-             Parameter-Free Derivation of Galaxy Rotation Curves 
-             from Information-Theoretic Field Energy},
-  author  = {Sasada, Yoshiaki},
-  year    = {2026},
-  publisher = {OSF},
-  doi     = {10.17605/OSF.IO/YADKR},
-  url     = {https://doi.org/10.17605/OSF.IO/YADKR}
+@misc{sasada2026qics,
+  author       = {Sasada, Yoshiaki},
+  title        = {Quantum Information Cosmology with Scalar Field (QIC-S) 
+                  Version 7.0: Mathematical Foundation for Multi-Hamiltonian Universe},
+  year         = {2026},
+  publisher    = {OSF},
+  doi          = {10.17605/OSF.IO/9ZS47},
+  url          = {https://osf.io/9zs47/}
 }
 ```
+
+---
+
+## 🙏 Acknowledgments
+
+This research was assisted by AI systems:
+- **Claude** (Anthropic) — Theoretical articulation and verification
+- **Gemini** (Google) — Numerical analysis and cross-checking
+
+All physical interpretations and theoretical frameworks are the **sole responsibility of the author**.
+
+---
+
+## 📚 Version History
+
+| Version | Date | Description |
+|---------|------|-------------|
+| **7.0 (Current)** | Jan 2026 | Mathematical Foundation via Conformal Interfaces |
+| [5.1 (Archive)](./archive/QIC-S_Ver5.1_Archive.md) | Dec 2025 | Optimization Principle formulation |
+| 3.9.11 | Dec 2025 | Seven-galaxy validation study |
+
+---
+
+## 📖 Abstract
+
+Ver.7.0 establishes a rigorous mathematical foundation for the "Multi-Hamiltonian Universe" central to QIC-S theory. By integrating the **Conformal Interface theory** of Komatsu, Kusuki, Meineri & Ooguri (arXiv:2512.11045), we demonstrate that regions with distinct effective Hamiltonians—individual galaxies—can coexist within a unified spacetime, smoothly connected by conformal interfaces.
+
+This framework yields a profound reinterpretation: the Dark Matter halo is not a cloud of exotic particles, but the **physical manifestation of the conformal interface**—the stress-energy cost of transitioning between galactic and intergalactic vacuum states.
+
+We term this the **Gluing Mechanism** (Japanese: のり, *nori*).
+
+---
+
+*"The universe is not governed by a single law, but by a landscape of laws—each galaxy a unique point on the conformal manifold, connected by the invisible glue (のり) of quantum field theory."*
+
+**— QIC-S Theory, Ver.7.0**
