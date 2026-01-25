@@ -50,9 +50,3 @@
 ```bash
 python qics_analyzer.py --file1 data/NGC2403_rotmod.dat --file2 data/ID830_rotmod.dat
 
-📄 引用・ライセンス
-本プロジェクトの著作権は Yoshiaki Sasada に帰属する。引用の際は以下の DOI を使用すること。
-
-DOI: 10.17605/OSF.IO/MBJN9
-
-License: CC BY 4.0
