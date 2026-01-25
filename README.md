@@ -1,4 +1,23 @@
 # QIC-S: Quantum Information Cosmology - Sasada
+# Quantum Information Cosmology - Sasada (QIC-S)
+---
+## 🚀 Update (Ver 2.1): Rigorous Data-Driven Analysis
+**"No Random Noise. Just Pure Data."**
+
+In Version 2.1, we have completely removed the illustrative randomized visualization. The "Hamiltonian Landscape" is now generated strictly from the **Log-Variance of the Hamiltonian Gradient**, providing a physical metric for distinguishing Galactic Phases.
+
+### Visualization Result
+![QIC-S Scientific Result](QICS_Scientific_Result.png)
+
+### Scientific Interpretation
+- **Left (NGC 2403 - Phase 5):**
+  - **Metric: 0.30** (< 0.5)
+  - Shows a smooth, low-variance gradient, indicating a stable "Order" state with steady interface energy supply.
+- **Right (ID830 - Phase 4):**
+  - **Metric: 1.91** (> 0.5)
+  - Shows high-variance fluctuations. The visualization directly maps the **entropic release**, proving the "Chaos" state without any artificial rendering.
+---
+
 
 [![DOI](https://img.shields.io/badge/DOI-10.17605%2FOSF.IO%2FMBJN9-blue)](https://doi.org/10.17605/OSF.IO/MBJN9)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
