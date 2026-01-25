@@ -33,38 +33,31 @@
 
 ### Key Figures
 
-![Universality](figures/QICS_Universality_NGC6503_UGC00128.png)
-*Figure 1: Universality of QIC-S across galaxy morphologies*
+#### Figure 1: Universality of QIC-S across galaxy morphologies
+![Universality](QICS_Universality_NGC6503_UGC00128.png)
 
-![Phase Transition](figures/QICS_Scientific_Result.png)
-*Figure 2: Phase transition from Order to Chaos*
+*NGC 6503 (Standard Spiral, Metric: 0.17) vs UGC 128 (LSB Galaxy, Metric: 0.26). Both exhibit stable Hamiltonian landscapes despite different surface brightness.*
+
+#### Figure 2: Phase transition from Order to Chaos
+![Phase Transition](QICS_Scientific_Result.png)
+
+*NGC 2403 (Phase 5, Metric: 0.30) vs ID 830 (Phase 4, Metric: 1.91). The chaotic landscape in ID 830 visualizes Entropic Release during the germinating phase.*
 
 ---
 
-## Repository Structure
+## Statistical Validation (Ver. 5.1)
 
-```
-QuantumInfoCosmo_NGC2403/
-├── README.md
-├── LICENSE
-├── papers/
-│   ├── QIC-S_Ver8_1_Sasada_2026.pdf
-│   ├── QIC-S_Paper_v3911.pdf
-│   └── ...
-├── code/
-│   ├── qics_analyzer.py          # Main analysis script (Ver. 2.1)
-│   ├── QICS_ZeroParam_Analysis.py
-│   └── requirements.txt
-├── data/
-│   ├── NGC2403_rotmod.dat
-│   ├── NGC6503_rotmod.dat
-│   ├── UGC00128_rotmod.dat
-│   ├── ID830_rotmod.dat
-│   └── ...
-└── figures/
-    ├── QICS_Universality_NGC6503_UGC00128.png
-    └── QICS_Scientific_Result.png
-```
+QIC-S achieves **99.46% ± 2.53% agreement** with observed rotation curves across 7 galaxies:
+
+| Galaxy | Type | Agreement |
+|--------|------|-----------|
+| DDO 154 | Dwarf | 100.21% |
+| NGC 2403 | SABcd | 98.46% |
+| NGC 3198 | SBc | 100.49% |
+| UGC 128 | LSB | 104.28% |
+| NGC 5055 | SAbc | 98.25% |
+| NGC 6503 | SAcd | 98.11% |
+| IC 2574 | Irr | 96.43% |
 
 ---
 
@@ -80,10 +73,10 @@ pip install numpy matplotlib
 
 ```bash
 # Single galaxy analysis
-python qics_analyzer.py --file1 data/NGC2403_rotmod.dat
+python qics_analyzer.py --file1 NGC2403_rotmod.dat
 
 # Comparison analysis
-python qics_analyzer.py --file1 data/NGC6503_rotmod.dat --file2 data/UGC00128_rotmod.dat
+python qics_analyzer.py --file1 NGC6503_rotmod.dat --file2 UGC00128_rotmod.dat
 ```
 
 ### Output
@@ -157,6 +150,16 @@ If you use QIC-S in your research, please cite:
 
 ---
 
+## References
+
+1. Kokubo, M. & Harikane, Y. (2025). ApJ, 995, 24.
+2. Obuchi, S. et al. (2026). ApJ, 997, 156.
+3. Tudorache, M. N. et al. (2025). MNRAS, 544, 4306–4319.
+4. Komatsu, S. et al. (2025). arXiv:2512.11045.
+5. Lelli, F., McGaugh, S. S., & Schombert, J. M. (2016). SPARC Database. AJ, 152, 157.
+
+---
+
 ## Acknowledgments
 
 This research was assisted by AI systems (Claude for theoretical articulation and Gemini for numerical analysis). All physical interpretations and theoretical frameworks are the sole responsibility of the author.
@@ -173,4 +176,3 @@ MIT License - See [LICENSE](LICENSE) for details.
 
 - **Author**: Yoshiaki Sasada
 - **GitHub**: [@QuantumInfoCosmo](https://github.com/QuantumInfoCosmo)
-- **OSF**: [https://osf.io/xxxxx](https://osf.io/)
