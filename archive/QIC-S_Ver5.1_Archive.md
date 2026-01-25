@@ -2,7 +2,7 @@
 **Parameter-Free Derivation of Galaxy Rotation Curves**
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black.svg?logo=github)](https://github.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403)
-[![OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FYADKR-blue.svg)](https://osf.io/yadkr/)
+[![OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FMBJN9-blue.svg)](https://osf.io/mbjn9/)
 ![Version](https://img.shields.io/badge/Version-5.1-green.svg)
 
 * **Version:** 5.1
