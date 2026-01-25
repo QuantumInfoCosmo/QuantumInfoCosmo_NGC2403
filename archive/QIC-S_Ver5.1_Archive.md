@@ -7,7 +7,7 @@
 
 * **Version:** 5.1
 * **Author:** Yoshiaki Sasada (Independent Researcher)
-* **Status:** Complete / Open for Review
+* **Status:** Complete / Archived
 
 ---
 
@@ -19,33 +19,17 @@ This project presents **Quantum Information Cosmology with Scalar Field (QIC-S)*
 
 By treating gravity as an emergent phenomenon driven by the conservation of **Information Field Energy**, QIC-S naturally reproduces the flat rotation curves of galaxies.
 
-### 🚀 Key Achievements
+### 🏆 Key Achievements
 
 1.  **Parameter-Free**: Unlike $\Lambda$CDM (NFW profiles) or MOND ($a_0$), QIC-S requires **no tuning parameters**. The halo mass is mathematically derived solely from the visible baryonic distribution.
 
 2.  **Universal Validity**: Tested against 7 diverse galaxies from the **SPARC database**, covering 2 orders of magnitude in mass ($10^{9.4} - 10^{11.3} M_\odot$).
 
-3.  **High Precision**: Mean statistical agreement of **99.46%** between theoretical predictions and dynamically required masses.
+3.  **Statistical Proof**: Achieved **99.46% ± 2.53%** agreement with dynamically required halo masses.
 
 ---
 
-## 📊 Results Summary
-
-| Galaxy | Type | M_Newton ($M_\odot$) | M_QIC ($M_\odot$) | Agreement |
-| :--- | :--- | :--- | :--- | :--- |
-| **DDO 154** | Dwarf | $2.46 \times 10^9$ | $2.46 \times 10^9$ | **100.21%** |
-| **NGC 2403** | Spiral | $6.92 \times 10^{10}$ | $6.81 \times 10^{10}$ | **98.46%** |
-| **NGC 3198** | Spiral | $1.65 \times 10^{11}$ | $1.66 \times 10^{11}$ | **100.49%** |
-| **UGC 128** | LSB | $1.67 \times 10^{11}$ | $1.75 \times 10^{11}$ | **104.28%** |
-| **NGC 5055** | Spiral | $2.02 \times 10^{11}$ | $1.98 \times 10^{11}$ | **98.25%** |
-| **NGC 6503** | Spiral | $5.57 \times 10^{10}$ | $5.47 \times 10^{10}$ | **98.11%** |
-| **IC 2574** | Irregular | $7.72 \times 10^9$ | $7.44 \times 10^9$ | **96.43%** |
-
-> **Global Mean Agreement: 99.46% ± 2.53%**
-
----
-
-## 🧠 Theoretical Framework
+## 📐 Theoretical Framework
 
 QIC-S posits that the "missing mass" is a manifestation of field energy associated with a scalar information field, $D(x,t)$, which emerges from the information entropy of spacetime.
 
@@ -78,19 +62,15 @@ QIC-S posits that the "missing mass" is a manifestation of field energy associat
 
 ---
 
-## 🔗 Citation
+## 📝 Citation
 
 If you use this theory or code in your research, please cite as:
 
 ```bibtex
-@misc{Sasada2026QICS,
-  title   = {Quantum Information Cosmology with Scalar Field (QIC-S): 
-             Parameter-Free Derivation of Galaxy Rotation Curves 
-             from Information-Theoretic Field Energy},
+@misc{Sasada2026QICS_v51,
+  title   = {Quantum Information Cosmology with Scalar Field (QIC-S): Parameter-Free Derivation},
   author  = {Sasada, Yoshiaki},
   year    = {2026},
-  publisher = {OSF},
-  doi     = {10.17605/OSF.IO/YADKR},
-  url     = {https://doi.org/10.17605/OSF.IO/YADKR}
+  version = {5.1},
+  url     = {[https://github.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403](https://github.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403)}
 }
-```
