@@ -1,9 +1,3 @@
----
-
-### 2. 修正版 `README_v7.0.md`
-※リンク切れを防ぐため、相対パスを少し整理しました。
-
-```markdown
 # Quantum Information Cosmology with Scalar Field (QIC-S)
 
 ## Version 7.0: Mathematical Foundation for Multi-Hamiltonian Universe
