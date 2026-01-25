@@ -53,6 +53,6 @@ archive/: Documentation of previous versions (v5.1, v7.0, etc.).
 📚 Citation & License
 Copyright (c) 2026 Yoshiaki Sasada. All rights reserved. When using this theory or code for your research, please cite the following DOI:
 
-Project DOI: 10.17605/OSF.IO/MBJN9
+* **DOI:** [10.17605/OSF.IO/MBJN9](https://doi.org/10.17605/OSF.IO/MBJN9)
+* **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-License: CC BY 4.0
