@@ -168,7 +168,7 @@ python plot_scaling_law.py
 
 ## 🔗 Related Work
 
-- **OSF Project**: [osf.io/9a3cd](https://osf.io/)
+- **OSF Project**: [osf.io/9a3cd](https://doi.org/10.17605/OSF.IO/9A3CD)
 - **Theoretical Background**: ER=EPR ([Maldacena & Susskind 2013](https://arxiv.org/abs/1306.0533))
 - **Conformal Interfaces**: [Komatsu et al. (2025)](https://arxiv.org/abs/2512.11045)
 
