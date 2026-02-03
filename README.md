@@ -35,7 +35,7 @@ A single power law connects galactic dynamics to cosmic large-scale structures:
 D_eff ∝ R^1.38    (R² = 0.920)
 ```
 
-![Universal Scaling Law](images/Fig3_Scaling_Law.png)
+![Universal Scaling Law](Fig3_Scaling_Law.png)
 
 **Figure 3**: The effective transport coefficient scales continuously from individual galaxies (~1 kpc) through cosmic filaments (15 Mpc). Gold stars indicate filament data from Tudorache et al. (2025).
 
@@ -48,7 +48,7 @@ Comprehensive SPARC database analysis confirms thermodynamic predictions:
 | **Order** | M < 0.5 | 133 | 78.2% |
 | **Chaos** | M ≥ 0.5 | 37 | 21.8% |
 
-![Phase Distribution](images/Fig2_Phase_Histogram.png)
+![Phase Distribution](Fig2_Phase_Histogram.png)
 
 **Figure 2**: The sharp peak near M ≈ 0 demonstrates that mature galaxies have established stable interface energy connections with Tier 2.
 
@@ -168,7 +168,7 @@ python plot_scaling_law.py
 
 ## 🔗 Related Work
 
-- **OSF Project**: [osf.io/XXXXX](https://osf.io/)
+- **OSF Project**: [osf.io/9a3cd](https://osf.io/)
 - **Theoretical Background**: ER=EPR ([Maldacena & Susskind 2013](https://arxiv.org/abs/1306.0533))
 - **Conformal Interfaces**: [Komatsu et al. (2025)](https://arxiv.org/abs/2512.11045)
 
