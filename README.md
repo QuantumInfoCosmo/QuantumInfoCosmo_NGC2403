@@ -33,7 +33,7 @@ M = Var(log(v²/r))
 | **Order** (Mature) | M < 0.5 | 133 | 78.2% |
 | **Chaos** (Germinating) | M ≥ 0.5 | 37 | 21.8% |
 
-![Phase Histogram](Fig2_Phase_Histogram.png)
+![Phase Histogram](https://raw.githubusercontent.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403/main/figures/Fig2_Phase_Histogram.png)
 
 ### Universal Scaling Law
 
@@ -47,7 +47,7 @@ This single power law connects:
 - HI structures (~1.7 Mpc)
 - Full filaments (~15 Mpc)
 
-![Scaling Law](Fig3_Scaling_Law.png)
+![Scaling Law](https://raw.githubusercontent.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403/main/figures/Fig3_Scaling_Law.png)
 
 ### Statistical Validation (Ver 9.1)
 
@@ -60,7 +60,7 @@ Bootstrap analysis (10,000 resamples) confirms:
 
 **The 95% CI strictly excludes α = 1.0**, confirming scale-dependent dynamical coupling.
 
-![Bootstrap Analysis](Fig4_Bootstrap_Analysis.png)
+![Bootstrap Analysis](https://raw.githubusercontent.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403/main/figures/Fig4_Bootstrap_Analysis.png)
 
 ---
 
@@ -108,10 +108,11 @@ QuantumInfoCosmo_NGC2403/
 │   ├── QIC_S_Result_N170.csv         # All galaxy metrics
 │   └── Bootstrap_Statistics.txt      # Detailed statistics [NEW]
 │
-├── Fig1_Individual_Verification.png
-├── Fig2_Phase_Histogram.png
-├── Fig3_Scaling_Law.png
-└── Fig4_Bootstrap_Analysis.png       # [NEW in Ver 9.1]
+└── figures/
+    ├── Fig1_Individual_Verification.png
+    ├── Fig2_Phase_Histogram.png
+    ├── Fig3_Scaling_Law.png
+    └── Fig4_Bootstrap_Analysis.png   # [NEW in Ver 9.1]
 ```
 
 ---
@@ -129,19 +130,19 @@ pip install numpy pandas matplotlib scipy seaborn
 ```bash
 # Step 1: Calculate Phase Metrics for all galaxies
 python phase_analysis.py
-# Output: results/QIC_S_Result_N170.csv, Fig2_Phase_Histogram.png
+# Output: results/QIC_S_Result_N170.csv, figures/Fig2_Phase_Histogram.png
 
 # Step 2: Generate Universal Scaling Law plot
 python plot_scaling_law.py
-# Output: Fig3_Scaling_Law.png
+# Output: figures/Fig3_Scaling_Law.png
 
 # Step 3: Perform Bootstrap statistical validation
 python bootstrap_analysis.py
-# Output: Fig4_Bootstrap_Analysis.png, results/Bootstrap_Statistics.txt
+# Output: figures/Fig4_Bootstrap_Analysis.png, results/Bootstrap_Statistics.txt
 
 # Optional: Analyze individual galaxies
 python qics_analyzer.py --file1 data/NGC6503_rotmod.dat --file2 data/UGC00128_rotmod.dat
-# Output: Fig1_Individual_Verification.png
+# Output: figures/Fig1_Individual_Verification.png
 ```
 
 ---
