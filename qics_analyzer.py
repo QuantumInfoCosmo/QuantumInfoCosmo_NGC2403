@@ -2,7 +2,7 @@
 """
 ================================================================================
 QIC-S Theory: Hamiltonian Landscape Analyzer
-Version: 2.2 (Logic Aligned with Pipeline)
+Version: 2.1 (Scientific Update)
 Author: Yoshiaki Sasada
 License: MIT
 
@@ -13,10 +13,10 @@ Description:
     - Phase 5 (Mature galaxies): Ordered, stable interface energy
     - Phase 4 (Germinating galaxies): Chaotic, entropic release
 
-    [UPDATE Ver 2.2]: 
-    - Logic aligned with phase_analysis.py Ver 9.1
-    - Phase Metric calculation uses np.var(np.log(grad_H)) consistently
-    - Output paths updated for new repository structure
+    [UPDATE Ver 2.1]: 
+    - Removed randomized visualization (strictly data-driven).
+    - Implemented Log-Variance metric for rigorous phase classification.
+    - Landscape now visualizes actual Hamiltonian gradient magnitude.
 
 Usage:
     python qics_analyzer.py --file1 data/NGC2403_rotmod.dat --file2 data/ID830_rotmod.dat
@@ -28,7 +28,7 @@ Data Format (SPARC standard):
     ... (Standard SPARC format)
 
 References:
-    [1] Sasada, Y. (2026). QIC-S Theory Ver 9.0
+    [1] Sasada, Y. (2026). QIC-S Theory Ver 8.0.6
     [2] Lelli, F. et al. (2016). SPARC Database. AJ, 152, 157.
 ================================================================================
 """
@@ -50,25 +50,23 @@ ML_BULGE = 0.7      # Mass-to-light ratio for bulge [M☉/L☉]
 KPC_TO_M = 3.086e19 # kpc to meters conversion
 KMS_TO_MS = 1000.0  # km/s to m/s conversion
 
-# Phase Classification Threshold (Aligned with phase_analysis.py)
-PHASE_THRESHOLD = 0.5
-
 # ==========================================
 # 2. COLOR SCHEME (Consistent with Paper)
 # ==========================================
 COLORS = {
-    'observed_mature': 'cyan',
-    'observed_germinating': 'red',
-    'prediction': 'white',
-    'entropic_release': 'red',
+    'observed_mature': 'cyan',      # Phase 5: Mature galaxy observation
+    'observed_germinating': 'red',  # Phase 4: Germinating galaxy observation
+    'prediction': 'white',          # QIC-S theoretical prediction (baryon only)
+    'entropic_release': 'red',      # Energy excess region
     'background': 'black',
     'text': 'white',
     'title_mature': 'cyan',
     'title_germinating': 'orange'
 }
 
-CMAP_ORDER = 'viridis'
-CMAP_CHAOS = 'inferno'
+# Landscape colormaps
+CMAP_ORDER = 'viridis'   # Phase 5: Smooth gradient (Order)
+CMAP_CHAOS = 'inferno'   # Phase 4: High energy gradient (Chaos)
 
 
 # ==========================================
@@ -95,8 +93,8 @@ class QICSAnalyzer:
             
         try:
             data = np.loadtxt(filename, comments='#')
-            r = data[:, 0]
-            v_obs = data[:, 1]
+            r = data[:, 0]          # Radius [kpc]
+            v_obs = data[:, 1]      # Observed velocity [km/s]
             
             if data.shape[1] > 2:
                 v_err = data[:, 2] if not np.all(data[:, 2] == 0) else None
@@ -142,26 +140,8 @@ class QICSAnalyzer:
     def compute_hamiltonian_landscape(self, r, v_obs, v_baryon):
         """
         Compute the Hamiltonian Landscape and Physical Phase Metric.
-        
-        ALIGNED with phase_analysis.py Ver 9.1:
-        - Phase Metric M = Var(log(v²/r))
+        Metric: Log-Variance of the Gradient (Information Entropy Proxy).
         """
-        # Filter valid data
-        mask = (r > 0) & (v_obs > 0)
-        r_valid = r[mask]
-        v_valid = v_obs[mask]
-        
-        if len(r_valid) < 5:
-            return np.zeros_like(r), np.zeros_like(r), 999.0
-        
-        # Hamiltonian gradient (information flux)
-        grad_H = (v_valid ** 2) / r_valid
-        
-        # Phase Metric: Variance of log-scaled gradient
-        # ALIGNED: Uses np.var(np.log(grad_H)) - same as phase_analysis.py
-        phase_metric = np.var(np.log(grad_H))
-        
-        # For visualization: normalized effective Hamiltonian
         with np.errstate(divide='ignore', invalid='ignore'):
             force_diff = (v_obs**2 - v_baryon**2) / r
             force_diff = np.nan_to_num(force_diff, nan=0.0, posinf=0.0, neginf=0.0)
@@ -169,22 +149,34 @@ class QICSAnalyzer:
         dr = np.gradient(r)
         h_eff = np.cumsum(force_diff * dr)
         
+        # Normalize h_eff for visualization
         h_range = np.max(h_eff) - np.min(h_eff)
         if h_range > 0:
             h_eff_norm = (h_eff - np.min(h_eff)) / h_range
         else:
             h_eff_norm = np.zeros_like(h_eff)
         
+        # Calculate Gradient (Information Flux)
         h_gradient = np.gradient(h_eff_norm)
+        
+        # --- PHYSICAL METRIC CALCULATION ---
+        grad_magnitude = np.abs(h_gradient)
+        epsilon = 1e-10
+        # Use log-variance to capture order vs chaos independent of scale
+        log_grad = np.log(grad_magnitude + epsilon)
+        phase_metric = np.var(log_grad)
+        # ---------------------------------------
         
         return h_eff_norm, h_gradient, phase_metric
     
     def classify_phase(self, phase_metric):
         """
         Classify galaxy evolutionary phase based on physical metric.
-        ALIGNED: Uses PHASE_THRESHOLD = 0.5 (same as phase_analysis.py)
+        Threshold (0.5) is derived from the separation between stable spirals and young quasars.
         """
-        if phase_metric >= PHASE_THRESHOLD:
+        PHYSICAL_THRESHOLD = 0.5 
+        
+        if phase_metric > PHYSICAL_THRESHOLD:
             return 4, "Phase 4: Germinating (Chaos)"
         else:
             return 5, "Phase 5: Mature (Order)"
@@ -225,10 +217,11 @@ def plot_single_galaxy(results, ax_curve, ax_landscape, force_phase=None):
     r = results['radius']
     v_obs = results['v_obs']
     v_pred = results['v_pred']
-    landscape_data = results['h_gradient']
+    landscape_data = results['h_gradient'] # Visualizing actual gradient data
     
     phase = force_phase if force_phase else results['phase']
     
+    # Setup styles based on Phase
     if phase == 5:
         obs_color = COLORS['observed_mature']
         title_color = COLORS['title_mature']
@@ -267,27 +260,29 @@ def plot_single_galaxy(results, ax_curve, ax_landscape, force_phase=None):
     
     theta = np.linspace(0, 2*np.pi, 100)
     R, THETA = np.meshgrid(r, theta)
+    
+    # Map the 1D gradient data to 2D polar plot
     Z = np.tile(landscape_data, (100, 1))
     
+    # Normalize Z for better visualization contrast
     if np.max(np.abs(Z)) > 0:
          Z = Z / np.max(np.abs(Z))
     
+    # Plot data (NO random noise)
     ax_landscape.pcolormesh(THETA, R, Z, cmap=cmap, shading='auto')
     
     ax_landscape.set_title(landscape_title, color=COLORS['text'], fontsize=12, pad=10)
     ax_landscape.set_xticklabels([])
     ax_landscape.tick_params(colors=COLORS['text'])
     
+    # Add metric score label
     ax_landscape.text(0, 0, f"Metric: {results['phase_metric']:.2f}", 
                      color='white', ha='center', va='center', 
                      bbox=dict(facecolor='black', alpha=0.5))
 
 
-def create_comparison_figure(results_list, output_filename="images/Fig1_Individual_Verification.png", 
-                            title="QIC-S Theory: Hamiltonian Landscape Analysis"):
-    # Ensure output directory exists
-    os.makedirs('images', exist_ok=True)
-    
+def create_comparison_figure(results_list, output_filename="QICS_Analysis_Scientific.jpg", 
+                            title="QIC-S Theory: Hamiltonian Landscape Analysis (Scientific)"):
     n_galaxies = len(results_list)
     fig = plt.figure(figsize=(10*n_galaxies, 12), facecolor=COLORS['background'])
     gs = GridSpec(2, n_galaxies, figure=fig, hspace=0.25, wspace=0.15)
@@ -310,14 +305,11 @@ def create_comparison_figure(results_list, output_filename="images/Fig1_Individu
 # 5. COMMAND LINE INTERFACE
 # ==========================================
 def main():
-    parser = argparse.ArgumentParser(
-        description='QIC-S Theory: Hamiltonian Landscape Analyzer (Ver 2.2)'
-    )
+    parser = argparse.ArgumentParser(description='QIC-S Theory: Hamiltonian Landscape Analyzer (Scientific)')
     parser.add_argument('--file1', required=True, help='First galaxy data file')
-    parser.add_argument('--file2', help='Second galaxy data file (optional)')
-    parser.add_argument('--output', default='images/Fig1_Individual_Verification.png', 
-                        help='Output filename')
-    parser.add_argument('--title', default='QIC-S Theory: Hamiltonian Landscape Analysis')
+    parser.add_argument('--file2', help='Second galaxy data file')
+    parser.add_argument('--output', default='QICS_Analysis_Scientific.jpg', help='Output filename')
+    parser.add_argument('--title', default='QIC-S Theory: Hamiltonian Landscape Analysis (Scientific)')
     
     args = parser.parse_args()
     analyzer = QICSAnalyzer()
@@ -327,11 +319,10 @@ def main():
         if fname:
             data = analyzer.load_sparc_file(fname)
             results = analyzer.analyze(data)
-            if results:
-                print(f"[INFO] {results['name']}: Phase Metric M = {results['phase_metric']:.3f}")
             results_list.append(results)
     
     create_comparison_figure(results_list, args.output, args.title)
+    # plt.show()
     return 0
 
 if __name__ == "__main__":
