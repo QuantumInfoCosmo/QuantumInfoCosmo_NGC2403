@@ -16,7 +16,7 @@ from scipy.stats import linregress
 # Configuration
 # ==========================================
 DATA_DIR = 'data'
-CSV_FILE = 'QIC_S_Result_N170.csv'
+CSV_FILE = 'results/QIC_S_Result_N170.csv'
 OUTPUT_IMAGE = 'Fig4_Universal_Scaling_Law.png'
 MIN_POINTS = 5
 

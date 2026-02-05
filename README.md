@@ -1,219 +1,211 @@
-# QIC-S Theory Ver 9.1: Two-Tier Steady-State Cosmology
+# Quantum Information Cosmology (QIC-S) Ver 9.2
 
-[![OSF](https://img.shields.io/badge/OSF-DOI%3A10.17605-brightgreen)](https://doi.org/10.17605/OSF.IO/9A3CD)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![DOI](https://img.shields.io/badge/DOI-10.17605%2FOSF.IO%2F9A3CD-green.svg)](https://doi.org/10.17605/OSF.IO/9A3CD)
 
----
+> **Two-Tier Steady-State Cosmology and the Discovery of a Universal Scaling Law**
 
-## Overview
-
-**Quantum Information Cosmology (QIC-S)** is a theoretical framework that explains galactic rotation curves and cosmic large-scale structures through information thermodynamics — **without invoking particle dark matter**.
-
-This repository presents **Ver 9.1**, which establishes:
-
-1. **Statistical Verification (N=170)**: 78.2% of SPARC galaxies reside in the thermodynamically stable "Order Phase"
-2. **Universal Scaling Law Discovery**: D_eff ∝ R^1.38 spans four orders of magnitude from galaxies (~10 kpc) to cosmic filaments (15 Mpc)
-3. **Statistical Robustness** *(New in Ver 9.1)*: Bootstrap analysis (N=10,000) confirms α = 1.40 ± 0.10 with 95% CI [1.24, 1.59], strictly excluding α = 1.0
+A unified theoretical framework explaining galactic rotation curves without invoking particle dark matter, reconceptualizing the universe as a Two-Tier System where gravity emerges from information transport and interface energy.
 
 ---
 
 ## Key Results
 
-### Phase Metric Distribution
+### 1. Galactic Phase Transition (N = 170)
 
-The **Phase Metric M** quantifies galactic evolutionary states:
-
-```
-M = Var(log(v²/r))
-```
+Analysis of the complete SPARC database demonstrates a clear bimodal distribution:
 
 | Phase | Criterion | Count | Percentage |
 |-------|-----------|-------|------------|
-| **Order** (Mature) | M < 0.5 | 133 | 78.2% |
-| **Chaos** (Germinating) | M ≥ 0.5 | 37 | 21.8% |
+| **Order** (Stable) | M < 0.5 | 133 | **78.2%** |
+| **Chaos** (Unstable) | M ≥ 0.5 | 37 | **21.8%** |
 
-![Phase Histogram](https://raw.githubusercontent.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403/main/figures/Fig2_Phase_Histogram.png)
+The sharp concentration near M ≈ 0 demonstrates that the majority of galaxies have achieved thermodynamic equilibrium with Tier 2 (Cosmic Web).
 
-### Universal Scaling Law
+### 2. Universal Scaling Law — A Discovery
 
-```
-D_eff ∝ R^1.38  (R² = 0.920)
-```
+We discover a single power law spanning **four orders of magnitude** from galactic scales (~10 kpc) to cosmic large-scale structures (15 Mpc):
 
-This single power law connects:
-- Individual galaxies (~1–80 kpc)
-- Cosmic filament cores (~50 kpc)  
-- HI structures (~1.7 Mpc)
-- Full filaments (~15 Mpc)
+$$D_{\text{eff}} \propto R^{1.38} \quad (R^2 = 0.920)$$
 
-![Scaling Law](https://raw.githubusercontent.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403/main/figures/Fig3_Scaling_Law.png)
+**Bootstrap Validation (N = 10,000 resamples):**
+- Scaling exponent: α = 1.40 ± 0.10
+- 95% CI: [1.24, 1.59]
+- **Strictly excludes trivial kinematic scaling (α = 1.0)**
 
-### Statistical Validation (Ver 9.1)
-
-Bootstrap analysis (10,000 resamples) confirms:
-
-| Parameter | Value | 95% CI |
-|-----------|-------|--------|
-| Scaling Exponent (α) | 1.40 ± 0.10 | [1.24, 1.59] |
-| R² | 0.925 ± 0.012 | [0.905, 0.952] |
-
-**The 95% CI strictly excludes α = 1.0**, confirming scale-dependent dynamical coupling.
-
-![Bootstrap Analysis](https://raw.githubusercontent.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403/main/figures/Fig4_Bootstrap_Analysis.png)
+This constitutes definitive evidence that galaxies and Cosmic Web filaments belong to the **same universality class**.
 
 ---
 
 ## Theoretical Framework
 
-### The Two-Tier Architecture
+### Two-Tier Architecture
 
-| Tier | Name | Scale | Characteristic |
-|------|------|-------|----------------|
-| **Tier 1** | Regenerative Cosmology | Galactic | Birth → Growth → Death → Rebirth |
-| **Tier 2** | New Steady-State Cosmology | Cosmic | Global stationarity via Cosmic Web |
+**Tier 1: Regenerative Cosmology**
+- Galactic scale: Birth → Growth → Death → Rebirth
+- Time: A locally emergent phenomenon
+- Six-phase galactic lifecycle
 
-**Biological Analogy**: Just as individual cells undergo apoptosis while the organism maintains homeostasis, galaxies cycle through evolutionary phases while the universe maintains steady-state equilibrium.
+**Tier 2: New Steady-State Cosmology**
+- Cosmic scale: Stationary (Eternal Present)
+- Angular momentum circulation via Cosmic Web
 
 ### Fundamental Constant
 
-```
-a₀ = cH₀ / 2π ≈ 1.2 × 10⁻¹⁰ m/s²
-```
+The critical acceleration scale derived from first principles:
 
-This provides a **zero-parameter foundation** for all calculations.
+$$a_0 = \frac{cH_0}{2\pi} \approx 1.2 \times 10^{-10} \text{ m/s}^2$$
 
 ---
 
 ## Repository Structure
 
 ```
-QuantumInfoCosmo_NGC2403/
-├── README.md
-├── requirements.txt
-├── .gitignore
-│
-├── Sasada_QIC-S_Ver9.1.pdf          # Full research paper
-├── Sasada_QIC-S_Ver9.1.tex          # LaTeX source
-│
-├── phase_analysis.py                 # Phase Metric calculation (Fig 2)
-├── plot_scaling_law.py               # Scaling law visualization (Fig 3)
-├── qics_analyzer.py                  # Individual galaxy analysis (Fig 1)
-├── bootstrap_analysis.py             # Statistical validation (Fig 4) [NEW]
-│
-├── data/                             # SPARC rotation curve data
-│   └── *_rotmod.dat
-│
+QIC-S_Ver9.2/
+├── Sasada_QIC-S_Ver9.2.pdf    # Full paper (English)
+├── phase_analysis.py          # Phase Metric (M) calculation
+├── qics_analyzer.py           # Figure 1: Hamiltonian Landscape
+├── plot_histogram.py          # Figure 2: Phase distribution
+├── plot_scaling_law.py        # Figure 3: Universal scaling law
+├── bootstrap_analysis.py      # Figure 4: Bootstrap validation
+├── requirements.txt           # Python dependencies
 ├── results/
-│   ├── QIC_S_Result_N170.csv         # All galaxy metrics
-│   └── Bootstrap_Statistics.txt      # Detailed statistics [NEW]
-│
-└── figures/
-    ├── Fig1_Individual_Verification.png
-    ├── Fig2_Phase_Histogram.png
-    ├── Fig3_Scaling_Law.png
-    └── Fig4_Bootstrap_Analysis.png   # [NEW in Ver 9.1]
+│   └── QIC_S_Result_N170.csv  # Analyzed dataset
+├── figures/
+│   ├── Figure_1_NGC0100.png           # Hamiltonian Landscape
+│   ├── Figure_2_Phase_Distribution.png # Phase histogram (N=170)
+│   ├── Figure_3_Universal_Scaling_Law.png # Scaling law plot
+│   └── Figure_4_Bootstrap_Analysis.png    # Bootstrap validation
+├── LICENSE
+└── README.md
 ```
 
 ---
 
-## Quick Start
+## Installation & Usage
 
 ### Requirements
 
+- Python 3.8+
+- NumPy, Matplotlib, SciPy, Pandas
+
+### Setup
+
 ```bash
-pip install numpy pandas matplotlib scipy seaborn
+# Clone the repository
+git clone https://github.com/QuantumInfoCosmo/QIC-S_Ver9.2.git
+cd QIC-S_Ver9.2
+
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-### Run Analysis Pipeline
+### Reproducing Figures
 
 ```bash
-# Step 1: Calculate Phase Metrics for all galaxies
-python phase_analysis.py
-# Output: results/QIC_S_Result_N170.csv, figures/Fig2_Phase_Histogram.png
+# Figure 1: Hamiltonian Landscape visualization
+python qics_analyzer.py
 
-# Step 2: Generate Universal Scaling Law plot
+# Figure 2: Phase distribution histogram (N=170)
+python plot_histogram.py
+
+# Figure 3: Universal scaling law (galaxies + filaments)
 python plot_scaling_law.py
-# Output: figures/Fig3_Scaling_Law.png
 
-# Step 3: Perform Bootstrap statistical validation
+# Figure 4: Bootstrap statistical validation
 python bootstrap_analysis.py
-# Output: figures/Fig4_Bootstrap_Analysis.png, results/Bootstrap_Statistics.txt
-
-# Optional: Analyze individual galaxies
-python qics_analyzer.py --file1 data/NGC6503_rotmod.dat --file2 data/UGC00128_rotmod.dat
-# Output: figures/Fig1_Individual_Verification.png
 ```
 
----
-
-## Data Sources
-
-| Dataset | Description | Reference |
-|---------|-------------|-----------|
-| **SPARC** | Spitzer Photometry & Accurate Rotation Curves (175 galaxies) | [Lelli et al. (2016) AJ 152:157](https://ui.adsabs.harvard.edu/abs/2016AJ....152..157L) |
-| **Filament** | 15 Mpc rotating cosmic filament | [Tudorache et al. (2025) MNRAS 544:4306](https://doi.org/10.1093/mnras/stae2246) |
+**Note:** All scripts read data from `results/QIC_S_Result_N170.csv`.
 
 ---
 
-## Testable Predictions
+## Data Availability
 
-| # | Prediction | Status |
-|---|------------|--------|
-| 1 | LRD-Quasar Transition Objects via JWST | Pending |
-| 2 | Interface density gradients steeper than NFW | Pending |
-| 3 | Filament rotation follows same scaling law | ✅ Verified |
-| 4 | 78.2% of galaxies in Order Phase (M < 0.5) | ✅ Verified |
-| 5 | Universal Scaling Law D_eff ∝ R^1.38 | ✅ Discovered |
-| 6 | Statistical robustness (95% CI excludes α=1.0) | ✅ Confirmed |
+### Analyzed Dataset
+
+The file `results/QIC_S_Result_N170.csv` contains pre-computed Phase Metrics and transport coefficients for all 170 SPARC galaxies meeting quality criteria.
+
+| Column | Description |
+|--------|-------------|
+| `Galaxy` | Galaxy identifier |
+| `R_max` | Maximum observed radius [kpc] |
+| `V_max` | Characteristic velocity [km/s] |
+| `D_eff` | Effective transport coefficient [kpc·km/s] |
+| `M` | Phase Metric (log-variance) |
+| `Phase` | Classification (Order/Chaos) |
+
+### Original Data Source
+
+Rotation curve data derived from the **SPARC database**:
+
+> Lelli, F., McGaugh, S. S., & Schombert, J. M. 2016, AJ, 152, 157  
+> [http://astroweb.case.edu/SPARC/](http://astroweb.case.edu/SPARC/)
 
 ---
 
-## Version History
+## Methodology
 
-| Version | Date | Changes |
-|---------|------|---------|
-| **9.1** | 2026-02-04 | Added Bootstrap analysis, Fig 4, statistical validation |
-| 9.0 | 2026-02-04 | Initial release with N=170 analysis and scaling law discovery |
+### Phase Metric Definition
+
+The Phase Metric M quantifies dynamical state using log-variance of the Hamiltonian gradient:
+
+$$M = \text{Var}\left(\log(|\nabla H| + \varepsilon)\right)$$
+
+where $\nabla H \approx v^2/r$ and $\varepsilon = 10^{-10}$ for numerical stability.
+
+**Physical interpretation:** Log-transformation extracts pure "entropic fluctuations" independent of scale, distinguishing laminar (Order) from turbulent (Chaos) information flow.
+
+### Effective Transport Coefficient
+
+$$D_{\text{eff}} = R \times v$$
+
+Represents scale-dependent effective dynamical coupling from a renormalization group perspective.
 
 ---
 
 ## Citation
 
+**DOI:** [10.17605/OSF.IO/9A3CD](https://doi.org/10.17605/OSF.IO/9A3CD)
+
+If you use this code or data, please cite:
+
 ```bibtex
-@article{Sasada2026QICS,
-  title   = {Two-Tier Steady-State Cosmology and the Discovery of a 
-             Universal Scaling Law: QIC-S Theory Ver 9.1},
+@article{sasada2026qics,
   author  = {Sasada, Yoshiaki},
+  title   = {Two-Tier Steady-State Cosmology and the Discovery of a Universal Scaling Law: {QIC-S} Theory Ver 9.2},
   year    = {2026},
   month   = {February},
-  note    = {Independent Researcher},
   doi     = {10.17605/OSF.IO/9A3CD},
-  url     = {https://github.com/QuantumInfoCosmo/QuantumInfoCosmo_NGC2403}
+  url     = {https://doi.org/10.17605/OSF.IO/9A3CD}
 }
 ```
 
 ---
 
-## Related Links
+## Related Work
 
-- **OSF Project**: [doi.org/10.17605/OSF.IO/9A3CD](https://doi.org/10.17605/OSF.IO/9A3CD)
-- **SPARC Database**: [astroweb.cwru.edu/SPARC](http://astroweb.cwru.edu/SPARC/)
+- **SPARC Database**: Lelli, McGaugh, & Schombert (2016), AJ, 152, 157
+- **Filament Rotation**: Tudorache et al. (2025), MNRAS, 544, 4306
+- **ER=EPR Conjecture**: Maldacena & Susskind (2013), Fortsch. Phys., 61, 781
+- **Conformal Interfaces**: Komatsu, Kusuki, Meineri, & Ooguri (2025), arXiv:2512.11045
 
 ---
 
 ## Acknowledgments
 
-- **SPARC Database**: Lelli, F., McGaugh, S. S., & Schombert, J. M. (2016)
-- **Filament Data**: Tudorache, M. N. et al. (2025)
-- **AI Assistance**: Claude (theoretical articulation) and Gemini (numerical analysis)
-
-All physical interpretations and theoretical frameworks are the sole responsibility of the author.
+This research was assisted by AI systems (Claude for theoretical articulation and Gemini for numerical analysis). All physical interpretations and theoretical frameworks are the sole responsibility of the author.
 
 ---
 
 ## License
 
-This work is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-© 2026 Yoshiaki Sasada. All rights reserved.
+---
+
+## Contact
+
+For questions regarding this research, please open an issue or contact via the repository.
+
+**Repository:** [https://github.com/QuantumInfoCosmo/QIC-S_Ver9.2](https://github.com/QuantumInfoCosmo/QIC-S_Ver9.2)
