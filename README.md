@@ -22,16 +22,25 @@ Analysis of the complete SPARC database demonstrates a clear bimodal distributio
 
 The sharp concentration near M ≈ 0 demonstrates that the majority of galaxies have achieved thermodynamic equilibrium with Tier 2 (Cosmic Web).
 
+![Figure 2: Phase Distribution](figures/Figure_2_Phase_Distribution.png)
+*Figure 2: Distribution of QIC-S Phase Metric M for 170 SPARC galaxies. Order Phase (blue): 78.2%, Chaos Phase (red): 21.8%.*
+
 ### 2. Universal Scaling Law — A Discovery
 
 We discover a single power law spanning **four orders of magnitude** from galactic scales (~10 kpc) to cosmic large-scale structures (15 Mpc):
 
 $$D_{\text{eff}} \propto R^{1.38} \quad (R^2 = 0.920)$$
 
+![Figure 3: Universal Scaling Law](figures/Figure_3_Universal_Scaling_Law.png)
+*Figure 3: Universal scaling of Hamiltonian dynamics from galaxies to filaments. SPARC galaxies (N=170) and Cosmic Web filaments align on a single power law.*
+
 **Bootstrap Validation (N = 10,000 resamples):**
 - Scaling exponent: α = 1.40 ± 0.10
 - 95% CI: [1.24, 1.59]
 - **Strictly excludes trivial kinematic scaling (α = 1.0)**
+
+![Figure 4: Bootstrap Analysis](figures/Figure_4_Bootstrap_Analysis.png)
+*Figure 4: Statistical validation via bootstrap resampling. The 95% CI strictly excludes α = 1.0.*
 
 This constitutes definitive evidence that galaxies and Cosmic Web filaments belong to the **same universality class**.
 
@@ -40,6 +49,9 @@ This constitutes definitive evidence that galaxies and Cosmic Web filaments belo
 ## Theoretical Framework
 
 ### Two-Tier Architecture
+
+![Figure 1: Hamiltonian Landscape](figures/Figure_1_NGC0100.png)
+*Figure 1: Representative Order Phase galaxy NGC 0100. Upper: rotation curve with QIC-S prediction. Lower: Hamiltonian Landscape visualization (M = 0.164).*
 
 **Tier 1: Regenerative Cosmology**
 - Galactic scale: Birth → Growth → Death → Rebirth
